@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #f5f5dc; /* Khaki */
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .book-container {
+      max-width: 600px;
+      width: 100%;
+      background: #fff;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: justify;
+    }
+
+    h1 {
+      color: #0d0909; /* Dark Gray */
+      font-size: 36px;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    h2 {
+      color: #000000;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #000000ab;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .choice-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #ff6b6b; /* Light Coral */
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 10px;
+      border-radius: 5px;
+    }
+
+    #result-container {
+      display: none;
+      margin-top: 30px;
+    }
+
+    #result-text {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #confirm-button {
+      background: #ff6b6b; /* Light Coral */
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      border-radius: 5px;
+    }
+  </style>
+  <title>Valentine's Day Invitation</title>
+</head>
+<body>
+  <div class="book-container">
+    <h1>Valentine's Day Invitation</h1>
+    <h2>hi cas,</h2>
+    <p>can i be your valentine?</p>
+    <div id="choices-container">
+      <button class="choice-button" onclick="showResult('Yes')">Yes</button>
+      <button class="choice-button" onclick="showResult('No')">No</button>
+    </div>
+    <div id="result-container">
+      <p id="result-text"></p>
+      <button id="confirm-button" onclick="confirmChoice()">Confirm</button>
+    </div>
+  </div>
+
+  <script>
+    function showResult(choice) {
+      var resultText = document.getElementById("result-text");
+      var confirmButton = document.getElementById("confirm-button");
+
+      if (choice === 'Yes') {
+        resultText.innerHTML = "ok thanks pre loveu";
+        confirmButton.style.background = '#57b846'; /* Light Green */
+      } else {
+        resultText.innerHTML = "namali guro kag click utroha ra";
+        confirmButton.style.background = '#ff6b6b'; /* Light Coral */
+      }
+
+      var resultContainer = document.getElementById("result-container");
+      resultContainer.style.display = "block";
+    }
+
+    function confirmChoice() {
+      alert("thanks dol regards kong missy");
+    }
+  </script>
+</body>
+</html>
